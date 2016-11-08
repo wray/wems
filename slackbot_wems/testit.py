@@ -38,6 +38,5 @@ class TestSlackBotFunctions(unittest.TestCase):
         #self.assertFalse(joe.slacklib.handle_command('green led on') == None)
 
 
-
 if __name__ == '__main__':
     unittest.main()
