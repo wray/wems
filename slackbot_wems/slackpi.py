@@ -10,19 +10,19 @@ import joe.slacklib
 import chris.slacklib
 
 # Student imports  
-import wems_ase.bella
-import wems_ase.clarke
-import wems_ase.dean
-import wems_ase.emerson
-import wems_ase.james
-import wems_ase.jonathan
-import wems_ase.kent
-import wems_ase.meira
-import wems_ase.morgan
-import wems_ase.sam
-import wems_ase.sienna
-import wems_ase.soumya
-import wems_ase.viktor
+import wems_ase.bella.slacklib
+import wems_ase.clarke.slacklib
+import wems_ase.dean.slacklib
+import wems_ase.emerson.slacklib
+import wems_ase.james.slacklib
+import wems_ase.jonathan.slacklib
+import wems_ase.kent.slacklib
+import wems_ase.meira.slacklib
+import wems_ase.morgan.slacklib
+import wems_ase.sam.slacklib
+import wems_ase.sienna.slacklib
+import wems_ase.soumya.slacklib
+import wems_ase.viktor.slacklib
 
 # constants
 try:
