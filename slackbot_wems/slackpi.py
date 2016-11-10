@@ -4,10 +4,25 @@ from slackclient import SlackClient
 
 import bot_id
 
-# Instructor and student imports
+# Instructor imports
 import wray.slacklib
 import joe.slacklib
 import chris.slacklib
+
+# Student imports  
+import wems_ase.bella
+import wems_ase.clarke
+import wems_ase.dean
+import wems_ase.emerson
+import wems_ase.james
+import wems_ase.jonathan
+import wems_ase.kent
+import wems_ase.meira
+import wems_ase.morgan
+import wems_ase.sam
+import wems_ase.sienna
+import wems_ase.soumya
+import wems_ase.viktor
 
 # constants
 try:
