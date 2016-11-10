@@ -9,7 +9,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "Minecraft"
+        response = "Minecraft!"
         
     return response
 
