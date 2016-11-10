@@ -1,6 +1,6 @@
 # Put your commands here
-COMMAND1 = "Name a venoumes snake"
-
+COMMAND1 = "Name a venomes snake"
+Command2 = "Name a type of dolphin"
 # Your handling code goes in this function
 def handle_command(command):
     """
