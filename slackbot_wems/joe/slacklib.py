@@ -16,10 +16,10 @@ def handle_command(command):
     response = ""
 
     if command.find(COMMAND1) >= 0:
-        response = "Just barely..."
+        response = "Yes! It's a beautiful day!"
 
     elif command.find(COMMAND2) >= 0:
-        response = "Sirexa Watson Siri-Alexa."
+        response = "I have not been given one yet."
 
     elif command.find(COMMAND3) >= 0:
         response = "electrons!"
@@ -34,9 +34,8 @@ def handle_command(command):
             response = "ok"
         else:
             response = "I'm not sure what to do with the green led."
-  
+
     elif command.find(COMMAND5) >= 0:
         response = "Sorry, I don't have that capability yet. Try asking me what the temperature is instead."
-        
-    return response
 
+    return response
