@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "What do you think of Chris?"
+COMMAND1 = "what do you think of chris?"
 
 # Your handling code goes in this function
 def handle_command(command):
