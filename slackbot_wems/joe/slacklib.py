@@ -1,7 +1,7 @@
 
 import led
 # Put your commands here
-COMMAND1 = "are you awake?"
+COMMAND1 = "are you awake 🌞?"
 COMMAND2 = "what is your full name?"
 COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
