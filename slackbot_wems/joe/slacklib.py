@@ -5,7 +5,7 @@ COMMAND1 = "are you awake?"
 COMMAND2 = "what is your full name?"
 COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
-COMMAND5 = "what is the weather for today?"
+COMMAND5 = "what is the weather like today?" # minor test for editing straight from the web
 
 # Your handling code goes in this function
 def handle_command(command):
