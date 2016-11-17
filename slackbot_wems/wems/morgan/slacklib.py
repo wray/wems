@@ -9,9 +9,9 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "it is a mammal" 
+        response = "it is a mammal." 
     elif command.find(COMMAND2) >=0:
-        response = "poodle pug blodhound foxhound buldog chcocolatelab grayhound golden retriever chihuahua mastiff newfoundland sheepdog shih tzu that is all i know" 
+        response = "poodle pug blodhound foxhound buldog chcocolatelab grayhound golden retriever chihuahua mastiff newfoundland sheepdog shih tzu that is all i know." 
 
 
     
