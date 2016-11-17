@@ -7,6 +7,8 @@ COMMAND3 = "what is your favorite snack?"
 COMMAND4 = "green led"
 COMMAND5 = "what is the weather like today?" # minor test for editing straight from the web
 
+COMMAND7 = "blue led"
+
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -38,4 +40,16 @@ def handle_command(command):
     elif command.find(COMMAND5) >= 0:
         response = "Sorry, I don't have that capability yet. Try asking me what the temperature is instead."
 
+
+    elif command.find(COMMAND7) >= 0:
+
+        if command.find("on") >= 0:
+            led.blue_led(1)
+            response = "ok"
+        elif command.find("off") >= 0:
+            led.blue_led(0)
+            response = "ok"
+        else:
+            response = "I'm not sure what to do with the blue led."
+            
     return response
