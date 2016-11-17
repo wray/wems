@@ -24,7 +24,7 @@ def handle_command(command):
     elif command.find(COMMAND3) >= 0:
         try:
             temp_c,temp,humidity = temp_humidity.read_temp_humidity()
-            response = "At my location, the temperature is " + str(temp) + " and the relative humidity is " + str(humidity)
+            response = "At West End Montessori School, the temperature is " + str(temp) + " and the relative humidity is " + str(humidity)
         except:
             response = "At my location, there is a sensor malfunction."
 
