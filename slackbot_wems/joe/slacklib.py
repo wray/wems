@@ -8,7 +8,7 @@ COMMAND4 = "green led"
 COMMAND5 = "what is the weather like today?" # minor test for editing straight from the web
 COMMAND6 = "red led"
 COMMAND7 = "blue led"
-COMMAND8 = "is a chair technology?
+COMMAND8 = "is a chair technology?"
 
 # Your handling code goes in this function
 def handle_command(command):
