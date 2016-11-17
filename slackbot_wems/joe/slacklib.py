@@ -8,6 +8,7 @@ COMMAND4 = "green led"
 COMMAND5 = "what is the weather like today?" # minor test for editing straight from the web
 COMMAND6 = "red led"
 COMMAND7 = "blue led"
+COMMAND8 = "is a chair technology?
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -62,5 +63,8 @@ def handle_command(command):
             response = "ok"
         else:
             response = "I'm not sure what to do with the blue led."
-            
+
+    elif command.find(COMMAND8) >= 0:
+        response = "Technology, is anything invented by humans that makes life easier or helps to solve problems. So, yes a chair is technology."
+
     return response
