@@ -1,6 +1,8 @@
 # Put your commands here
 COMMAND1 = "hi"
 COMMAND2 = "temp?"
+COMMAND3 = "am i a hacker?"
+COMMAND4 = "who is the master?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -10,10 +12,13 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "Hi Minecraftman"
+        response = "Hi Minecraft(wo)man"
     
     elif command.find(COMMAND2) >= 0:
         response = "60F"     
-        
+    elif command.find(COMMAND3) >= 0:
+        response = "yes you are destined to be a hacker"
+    elif command.find(COMMAND4) >= 0:
+        response = "Kent is the master. All hail Kent"
     return response
 
