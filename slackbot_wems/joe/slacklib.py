@@ -49,6 +49,8 @@ def handle_command(command):
         elif command.find("off") >= 0:
             led.red_led(0)
             response = "ok"
+        else:
+            response = "I'm not sure what to do with the red led."
 
     elif command.find(COMMAND7) >= 0:
 
