@@ -23,6 +23,7 @@ def handle_command(command):
     elif command.find(COMMAND3) >= 0:
          response = "corgi"
     elif command.find(COMMAND4) >= 0:
-          response = "doughnut"
+         
+         response = "doughnut"
         
     return response
