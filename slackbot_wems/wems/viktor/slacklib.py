@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "slime"
+COMMAND1 = "/pfs"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -9,7 +9,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "Hi! Today is a SlImEy day!!!"
+        response = "you found an easter egg! PRO_FuZion_SlIME made this easter egg!"
         
     return response
 
