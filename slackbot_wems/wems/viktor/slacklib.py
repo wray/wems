@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "/pfs"
+COMMAND1 = "pfs"
 
 # Your handling code goes in this function
 def handle_command(command):
