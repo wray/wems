@@ -1,4 +1,4 @@
-
+import time
 import led
 # Put your commands here
 COMMAND1 = "are you awake?"
