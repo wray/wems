@@ -62,7 +62,7 @@ def handle_command(command, channel):
         response += wems.soumya.slacklib.handle_command(command)
         response += wems.viktor.slacklib.handle_command(command)
     except:
-        response += sys.exc_info()[0]
+        response += str(sys.exc_info()[0])
 
     print("["+response+"]")
     
