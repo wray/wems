@@ -35,7 +35,7 @@ def handle_command(command):
 		response = animals[random.randint(0,len(animals)-1)]
 
 	elif command.find(COMMAND6) >= 0:
-        	response = __version__
+        	response = "$Id$"
 
 	return response
 
