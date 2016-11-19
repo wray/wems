@@ -41,24 +41,25 @@ def handle_command(command, channel):
         returns back what it needs for clarification.
         Need to determine an algorithm for student overloaded commands.
     """
-
-    response = wray.slacklib.handle_command(command)
-    response += joe.slacklib.handle_command(command)
-    response += chris.slacklib.handle_command(command)
+    try:
+        response = wray.slacklib.handle_command(command)
+        response += joe.slacklib.handle_command(command)
+        response += chris.slacklib.handle_command(command)
     
-    response += wems.bella.slacklib.handle_command(command)
-    response += wems.clarke.slacklib.handle_command(command)
-    response += wems.dean.slacklib.handle_command(command)
-    response += wems.emerson.slacklib.handle_command(command)
-    response += wems.james.slacklib.handle_command(command)
-    response += wems.kent.slacklib.handle_command(command)
-    response += wems.meira.slacklib.handle_command(command)
-    response += wems.morgan.slacklib.handle_command(command)
-    response += wems.sam.slacklib.handle_command(command)
-    response += wems.sienna.slacklib.handle_command(command)
-    response += wems.soumya.slacklib.handle_command(command)
-    response += wems.viktor.slacklib.handle_command(command)
-
+        response += wems.bella.slacklib.handle_command(command)
+        response += wems.clarke.slacklib.handle_command(command)
+        response += wems.dean.slacklib.handle_command(command)
+        response += wems.emerson.slacklib.handle_command(command)
+        response += wems.james.slacklib.handle_command(command)
+        response += wems.kent.slacklib.handle_command(command)
+        response += wems.meira.slacklib.handle_command(command)
+        response += wems.morgan.slacklib.handle_command(command)
+        response += wems.sam.slacklib.handle_command(command)
+        response += wems.sienna.slacklib.handle_command(command)
+        response += wems.soumya.slacklib.handle_command(command)
+        response += wems.viktor.slacklib.handle_command(command)
+    except:
+        response += sys.exc_info()[0]
 
     print("["+response+"]")
     
