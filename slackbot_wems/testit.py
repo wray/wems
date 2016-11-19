@@ -24,6 +24,9 @@ class TestSlackBotFunctions(unittest.TestCase):
         print(resp)
         self.assertTrue(len(resp) > 1)
 
+    def test_exc_handler(self):
+        self.assertTrue(slackpi.handle_command('version','channel') == None)
+        
     def test_chris_handler(self):
         self.assertFalse(chris.slacklib.handle_command('') == None)
         self.assertTrue(len(chris.slacklib.handle_command(
