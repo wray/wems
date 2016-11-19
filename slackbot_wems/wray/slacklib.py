@@ -18,13 +18,13 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "I am a simpleton bot."
+        response = "My name is Wemmy! I am a Slack bot that is built by the kids are West End Montessori school! Try asking what I can do."
     elif command.find(COMMAND2) >= 0:
         response = "Not much right now... waiting for students to teach me."
     elif command.find(COMMAND3) >= 0:
         try:
             temp_c,temp,humidity = temp_humidity.read_temp_humidity()
-            response = "At my location, the temperature is " + str(temp) + " and the relative humidity is " + str(humidity)
+            response = "At West End Montessori School, the temperature is " + str(temp) + " and the relative humidity is " + str(humidity)
         except:
             response = "At my location, there is a sensor malfunction."
 
