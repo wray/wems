@@ -2,7 +2,7 @@
 COMMAND1 = "hi"
 COMMAND2 = "temp?"
 COMMAND3 = "am I a hacker?"
-COMMAND4 = "who is the ,master"
+COMMAND4 = "who is the master"
 
 # Your handling code goes in this function
 def handle_command(command):
