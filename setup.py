@@ -6,7 +6,7 @@ from distutils.core import setup
 
 patch_level = int(time.time())
 
-ver = "0.1." + str(patch_level)[3:]
+ver = "0.2." + str(patch_level)[1:]
 
 setup(
   name = 'slackbot_wems',
