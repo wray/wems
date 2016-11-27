@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Put your commands here
 COMMAND1 = "hi"
 COMMAND2 = "am i a hacker?"
@@ -8,7 +9,8 @@ COMMAND5 = "russian keyboard?"
 # Your handling code goes in this function
 def handle_command(command):
     """
-        Determine if the command is valid. If so, take action and return
+        Determine if the command
+         is valid. If so, take action and return
         a response, if necessary.
     """
     response = ""
