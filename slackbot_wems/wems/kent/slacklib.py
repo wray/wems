@@ -5,6 +5,7 @@ COMMAND3 = "who is the master"
 COMMAND4 = "why do you have so many commands?"
 COMMAND5 = "kecko"
 COMMAND6 = "time to eat the cake!"
+COMMAND7 = "name 4 names of cats"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -26,5 +27,7 @@ def handle_command(command):
         response = "happy birthday! @kecko made it your birthday! the next birthday command is: time to eat the cake!"
     elif command.find(COMMAND6) >= 0:
         response = "someone stole the cake, it was Dean!"
+    elif command.find(COMMAND7) >= 0:
+        response = "Caspian and Luna -- who are Kent's cats -- and Huckle and Nugget -- who are Emerson's cats"
         
     return response
