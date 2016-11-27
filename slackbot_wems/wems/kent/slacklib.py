@@ -6,7 +6,7 @@ COMMAND4 = "why do you have so many commands?"
 COMMAND5 = "kecko"
 COMMAND6 = "time to eat the cake!"
 COMMAND7 = "name 4 names of cats"
-COMMAND8 = ""
+COMMAND8 = "can I make a game?"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -30,5 +30,7 @@ def handle_command(command):
         response = "Dean stole the cake, I'll make another in 999 hours!"
     elif command.find(COMMAND7) >= 0:
         response = "Caspian and Luna -- who are Kent's cats -- and Huckle and Nugget -- who are Emerson's cats"
+    elif command.find(COMMAND8) >= 0:
+        response = "you can with this link https://www.makeschool.com/build-an-iphone-game-in-your-browser"
         
     return response
