@@ -23,7 +23,7 @@ def handle_command(command):
     elif command.find(COMMAND4) >= 0:
         response = "the WEMS students are giving them to me"
     elif command.find(COMMAND5) >= 0:
-        response = "happy birthday! @kecko made it your birthday! the next birthday command is, time to eat the cake!"
+        response = "happy birthday! @kecko made it your birthday! the next birthday command is: time to eat the cake!"
     elif command.find(COMMAND6) >= 0:
         response = "someone stole the cake, it was Dean!"
         
