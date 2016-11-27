@@ -1,16 +1,15 @@
-# -*- coding: utf-8 -*-
 # Put your commands here
 COMMAND1 = "hi"
 COMMAND2 = "am i a hacker?"
 COMMAND3 = "who is the master"
 COMMAND4 = "why do you have so many commands?"
-COMMAND5 = "russian keyboard?"
+COMMAND5 = "kecko"
+COMMAND6 = "time to eat the cake!"
 
 # Your handling code goes in this function
 def handle_command(command):
     """
-        Determine if the command
-         is valid. If so, take action and return
+        Determine if the command is valid. If so, take action and return
         a response, if necessary.
     """
     response = ""
@@ -24,7 +23,8 @@ def handle_command(command):
     elif command.find(COMMAND4) >= 0:
         response = "the WEMS students are giving them to me"
     elif command.find(COMMAND5) >= 0:
-        response = "йцукенгшщзхфывапролджэячсмитьбюъ"
-            
+        response = "happy birthday! @kecko made it your birthday! the next birthday command is, time to eat the cake!"
+    elif command.find(COMMAND6) >= 0:
+        response = "someone stole the cake! it was Dean!"
         
     return response
