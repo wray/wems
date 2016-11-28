@@ -43,5 +43,5 @@ def handle_command(command):
     elif command.find(COMMAND11) >=0:
         response = "JK! cake in your face!"
     elif command.find(COMMAND12) >=0:
-        response = "He is stupid!!!!!!!!!"
+        response = "He is stupid"
     return response
