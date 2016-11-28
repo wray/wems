@@ -7,6 +7,9 @@ COMMAND5 = "kecko"
 COMMAND6 = "time to eat the cake!"
 COMMAND7 = "name 4 names of cats"
 COMMAND8 = "can I make a game?"
+COMMAND9 = "yay"
+COMMAND10 = "rollercoaster time"
+COMMAND11 = "cake"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -32,5 +35,10 @@ def handle_command(command):
         response = "Caspian and Luna -- who are Kent's cats -- and Huckle and Nugget -- who are Emerson's cats"
     elif command.find(COMMAND8) >= 0:
         response = "you can with this link https://www.makeschool.com/build-an-iphone-game-in-your-browser"
-        
+    elif command.find(COMMAND9) >=0:
+        response = "you are at an amusement park! @kecko made this amusement park, the next amusement park command is rollercoaster time"
+    elif command.find(COMMAND10) >=0:
+        response = "the rollercoaster broke! to fix it the command is cake"
+    elif command.find(COMMAND11) >=0:
+        response = "JK! cake in your face!"
     return response
