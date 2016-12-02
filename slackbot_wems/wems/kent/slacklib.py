@@ -10,7 +10,7 @@ COMMAND8 = "can I make a game?"
 COMMAND9 = "yay"
 COMMAND10 = "rollercoaster time"
 COMMAND11 = "cake"
-COMMAND12 = "Donald Trump"
+COMMAND12 = "i am the master"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -43,5 +43,5 @@ def handle_command(command):
     elif command.find(COMMAND11) >=0:
         response = "JK! cake in your face!"
     elif command.find(COMMAND12) >=0:
-        response = "He is stupid"
+        response = "nope! Kent is the master"
     return response
