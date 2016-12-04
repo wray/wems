@@ -12,7 +12,7 @@ def handle_command(command):
     if command.find(COMMAND1) >= 0:
         response = "poodle pug blodhound foxhound buldog chcocolatelab grayhound golden retriever chihuahua mastiff newfoundland sheepdog shih tzu that is all i know."
     elif command.find(COMMAND2) >= 0:
-        response = "black lab, yellow lab, chocolate lab, cute pug, snouser, Great Dane, terrier."
+        response = "black lab, yellow lab, chocolate lab, cute pug, schnauzer, Great Dane, terrier, poodle, pug, blodhound, foxhound, buldog, chcocolatelab, grayhound, golden retriever, chihuahua, mastiff, newfoundland, sheepdog, shih."
         
     return response
 
