@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "slime"
+COMMAND1 = "haha"
 COMMAND2 = "pfs"
 COMMAND3 = "egg"
 
@@ -11,7 +11,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "Hi! Today is a SlImEy day!!!"
+        response = "@wemmy haha"
     elif command.find(COMMAND2) >=0:
         response = "you found an easter egg! PRO_FuZion_SlIME made this easter egg! the next easter egg command is egg"
         
