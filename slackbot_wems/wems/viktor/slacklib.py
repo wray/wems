@@ -15,7 +15,9 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = haha_loop()
+        if command.find("haha") >= 0:
+            haha_loop()
+            response = "ok"
     elif command.find(COMMAND2) >=0:
         response = "you found an easter egg! PRO_FuZion_SlIME made this easter egg! the next easter egg command is egg"
 
