@@ -15,6 +15,8 @@ def haha_loop():
         # Add to the response:
         response += "haha... "
 
+    return response
+
 # Your handling code goes in this function
 def handle_command(command):
     """
