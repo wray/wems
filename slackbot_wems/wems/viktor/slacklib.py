@@ -4,8 +4,16 @@ COMMAND2 = "pfs"
 COMMAND3 = "egg"
 
 def haha_loop():
+    # create a string to hold the response
+    response = ""
     for i in range(15):
-        print("@wemmy haha")
+        # Print statements do not get
+        # sent back to slack, they will only
+        # print out where the code is run (on the pi)
+        #print("@wemmy haha")
+
+        # Add to the response:
+        response += "haha... "
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -15,9 +23,18 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        if command.find("haha") >= 0:
-            haha_loop()
-            response = "ok"
+        # This next conditional is redundant, the line above already checks
+        # for that exact condition
+        #if command.find("haha") >= 0:
+
+        # And because you have created a function that returns a response
+        # string, just set this response to that to go back to the
+        # slack channel
+        response += haha_loop()
+
+        # This would just overwrite the response, so commented out
+        # response = "ok"
+
     elif command.find(COMMAND2) >=0:
         response = "you found an easter egg! PRO_FuZion_SlIME made this easter egg! the next easter egg command is egg"
 
