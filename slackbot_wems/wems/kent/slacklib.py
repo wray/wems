@@ -49,5 +49,5 @@ def handle_command(command):
     elif command.find(COMMAND13) >= 0:
         response = "sure, guess away! (but remember you have to put my name first and it has to be lowercase)"
     elif command.find(COMMAND14) >= 0:
-        response = "correct
+        response = "correct"
     return response
