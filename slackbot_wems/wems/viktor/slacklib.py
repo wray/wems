@@ -6,7 +6,7 @@ COMMAND3 = "egg"
 def haha_loop():
     # create a string to hold the response
     response = ""
-    for i in range(2):
+    for i in range(1000):
         # Print statements do not get
         # sent back to slack, they will only
         # print out where the code is run (on the pi)
