@@ -13,6 +13,7 @@ COMMAND11 = "cake"
 COMMAND12 = "i am the master"
 COMMAND13 = "do you think i can guess @sam's favorite game?"
 COMMAND14 = "minecraft"
+COMMAND15 = "y"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -42,7 +43,7 @@ def handle_command(command):
         response = "you are at an amusement park! @kecko made this amusement park, the next amusement park command is rollercoaster time"
     elif command.find(COMMAND10) >= 0:
         response = "the rollercoaster broke! to fix it the command is cake"
-    elif command.find(COMMAND11) >=0:
+    elif command.find(COMMAND11) >= 0:
         response = "JK! cake in your face!"
     elif command.find(COMMAND12) >= 0:
         response = "nope! Kent is the master"
@@ -50,4 +51,6 @@ def handle_command(command):
         response = "sure, guess away! (but remember you have to put my name first and it has to be lowercase)"
     elif command.find(COMMAND14) >= 0:
         response = "correct"
+    elif command.find(COMMAND15) >= 0:
+        response = "@kecko++ @kecko++"
     return response
