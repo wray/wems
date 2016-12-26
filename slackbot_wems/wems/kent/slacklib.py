@@ -14,6 +14,8 @@ COMMAND12 = "i am the master"
 COMMAND13 = "do you think i can guess @sam's favorite game?"
 COMMAND14 = "minecraft"
 COMMAND15 = "y"
+COMMAND16 = "hacking time"
+COMMAND17 = "but you said I was destined to be a hacker"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -53,4 +55,8 @@ def handle_command(command):
         response = "correct"
     elif command.find(COMMAND15) >= 0:
         response = "@kecko++ @kecko++"
+    elif command.find(COMMAND16) >= 0:
+        response = "NO WAY"
+    elif command.find(COMMAND17) >= 0:
+        response = "I know I said you were destined to be a hacker, I meant no hacking me"
     return response
