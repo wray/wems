@@ -1,5 +1,5 @@
 # Python package
-COMMAND1 = "~~"
+COMMAND1 = "im a cat"
 
 # Your handling code goes in this function
 def handle_command(command):
