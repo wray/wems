@@ -23,7 +23,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response += "good cat"
+        response += good_cat_loop()
         
     return response
 
