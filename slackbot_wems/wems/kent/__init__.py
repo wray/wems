@@ -9,8 +9,8 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = for i in range (145):
-          print "good cat"
+        for i in range (145):
+            response = "good cat"
         
     return response
 
