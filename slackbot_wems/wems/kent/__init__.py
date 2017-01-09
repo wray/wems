@@ -13,8 +13,8 @@ def good_cat_loop():
         # Add to the response:
         response += "@wemmy good cat "
 
-return response
-
+        return response
+    
 # Your handling code goes in this function
 def handle_command(command):
     """
