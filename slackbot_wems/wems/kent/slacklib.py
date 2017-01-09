@@ -75,7 +75,7 @@ def good_cat_loop():
         # Add to the response:
         response += "@wemmy good cat "
 
-return response
+        return response
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -87,4 +87,5 @@ def handle_command(command):
     if command.find(COMMAND1) >= 0:
         response += good_cat_loop()
         
-return response
+    return response
+    
