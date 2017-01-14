@@ -73,10 +73,9 @@ def good_cat_loop():
         #print("@wemmy haha")
 
         # Add to the response:
-        response += "@wemmy good cat "
+        response += "@wemmy good cat"
 
-        return response
-
+        
 # Your handling code goes in this function
 def handle_command(command):
     """
