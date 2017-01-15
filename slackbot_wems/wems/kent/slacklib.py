@@ -63,7 +63,7 @@ def handle_command(command):
 
 COMMAND1 = "im a cat"
 
-def good_cat_loop():
+def ha_loop():
     # create a string to hold the response
     response = ""
     for i in range(1000):
@@ -84,7 +84,7 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response += good_cat_loop()
+        response += ha_loop()
         
     return response
     
