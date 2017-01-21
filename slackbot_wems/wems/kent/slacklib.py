@@ -1,5 +1,6 @@
 # Put your commands here
-COMMAND1 = "hi"
+COMMAND1 = "im a cat"
+#COMMAND1 = "hi"
 COMMAND2 = "am i a hacker?"
 COMMAND3 = "who is the master"
 COMMAND4 = "why do you have so many commands?"
@@ -17,6 +18,21 @@ COMMAND15 = "y"
 COMMAND16 = "hacking time"
 COMMAND17 = "but you said I was destined to be a hacker"
 
+def ha_loop():
+    # create a string to hold the response
+    response = ""
+    for i in range(100):
+        # Print statements do not get
+        # sent back to slack, they will only
+        # print out where the code is run (on the pi)
+        #print("@wemmy haha")
+
+        # Add to the response:
+        response += "@wemmy good cat; "
+    return response
+
+
+
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -25,7 +41,10 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = "Hi Minecraftman"
+        response = ha_loop()
+
+#    if command.find(COMMAND1) >= 0:
+#        response = "Hi Minecraftman"
     
     elif command.find(COMMAND2) >= 0:
         response = "yes, you are destined to be a hackerF"
@@ -61,30 +80,17 @@ def handle_command(command):
         response = "I know I said you were destined to be a hacker, I meant no hacking me"
     return response
 
-COMMAND1 = "im a cat"
-
-def ha_loop():
-    # create a string to hold the response
-    response = ""
-    for i in range(1000):
-        # Print statements do not get
-        # sent back to slack, they will only
-        # print out where the code is run (on the pi)
-        #print("@wemmy haha")
-
-        # Add to the response:
-        response += "@wemmy good cat"
-
+# COMMAND1 = "im a cat"        
         
-# Your handling code goes in this function
-def handle_command(command):
-    """
-        Determine if the command is valid. If so, take action and return
-        a response, if necessary.
-    """
-    response = ""
-    if command.find(COMMAND1) >= 0:
-        response += ha_loop()
+# # Your handling code goes in this function
+# def handle_command(command):
+#     """
+#         Determine if the command is valid. If so, take action and return
+#         a response, if necessary.
+#     """
+#     response = ""
+#     if command.find(COMMAND1) >= 0:
+#         response += ha_loop()
         
-    return response
+#     return response
     
