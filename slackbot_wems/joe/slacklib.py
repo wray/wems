@@ -72,6 +72,6 @@ def handle_command(command):
 			response = "I'm not sure what to do with the blue led."
 
 	elif command.find(COMMAND8) >= 0:
-		response = asctime()
+		response = time.asctime()
 
 	return response
