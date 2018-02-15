@@ -11,6 +11,8 @@ import joe.slacklib
 import chris.slacklib
 
 # Student imports  
+import matthew.slacklib
+
 import wems.bella.slacklib
 import wems.clarke.slacklib
 import wems.dean.slacklib
@@ -49,6 +51,8 @@ def handle_command(command, channel):
         response += joe.slacklib.handle_command(command)
         response += chris.slacklib.handle_command(command)
     
+        response += matthew.slacklib.handle_command(command)
+
         response += wems.bella.slacklib.handle_command(command)
         response += wems.clarke.slacklib.handle_command(command)
         response += wems.dean.slacklib.handle_command(command)

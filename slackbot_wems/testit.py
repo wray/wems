@@ -4,6 +4,7 @@ import slackpi
 import wray.slacklib
 import chris.slacklib
 import joe.slacklib
+import matthew.slacklib
 import wems.kent.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
@@ -40,6 +41,9 @@ class TestSlackBotFunctions(unittest.TestCase):
        # self.assertTrue(slackpi.handle_command(
            # joe.slacklib.COMMAND1,"") == None)
         #self.assertFalse(joe.slacklib.handle_command('green led on') == None)
+
+    def test_matthew_handler(self):
+        self.assertFalse(matthew.slacklib.handle_command('') == None)
 
     def test_kent_handler(self):
         self.assertFalse(wems.kent.slacklib.handle_command('') == None)
