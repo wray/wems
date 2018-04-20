@@ -8,7 +8,7 @@ COMMAND4 = "green led"
 COMMAND5 = "what is the weather like today?" # minor test for editing straight from the web
 COMMAND6 = "red led"
 COMMAND7 = "blue led"
-COMMAND8 = "what time is it?"
+COMMAND8 = "what time is it??"
 
 def blink_green():
 	for i in range(2):
