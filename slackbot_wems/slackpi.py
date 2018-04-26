@@ -27,6 +27,14 @@ import wems.sienna.slacklib
 import wems.soumya.slacklib
 import wems.viktor.slacklib
 
+import wems.adele.slacklib
+import wems.hank.slacklib
+import wems.ibby.slacklib
+import wems.layla.slacklib
+import wems.mardi_belle.slacklib
+import wems.naomi.slacklib
+import wems.spencer.slacklib
+
 # constants
 try:
     AT_BOT = "<@" + bot_id.get_id() + ">"
@@ -65,6 +73,14 @@ def handle_command(command, channel):
         response += wems.sienna.slacklib.handle_command(command)
         response += wems.soumya.slacklib.handle_command(command)
         response += wems.viktor.slacklib.handle_command(command)
+
+        response += wems.adele.slacklib.handle_command(command)
+        response += wems.hank.slacklib.handle_command(command)
+        response += wems.ibby.slacklib.handle_command(command)
+        response += wems.layla.slacklib.handle_command(command)
+        response += wems.mardi_belle.slacklib.handle_command(command)
+        response += wems.naomi.slacklib.handle_command(command)
+        response += wems.spencer.slacklib.handle_command(command)
     except:
         response += str(sys.exc_info()[0])
 
