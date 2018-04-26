@@ -8,7 +8,7 @@ def handle_command(command):
         a response, if necessary.
     """
     response = ""
-    if command.find(COMMAND1) >= 0:
+    if COMMAND1 in command:
         response = "Huh?"
         
     return response
