@@ -1,6 +1,7 @@
 # Put your commands here
 COMMAND1 = "name a venomous snake"
 COMMAND2 = "name a school"
+COMMAND3 = "what is the weather?"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -12,6 +13,8 @@ def handle_command(command):
         response = "Indian cobra???"
     elif COMMAND2 in command:
         response = "wems"
+    elif COMMAND3 in command:
+		response = "Look outside!"
         
     return response
 
