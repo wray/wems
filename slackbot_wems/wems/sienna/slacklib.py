@@ -1,6 +1,7 @@
 # Put your commands here
-COMMAND1 = "name a venomous snake"
-COMMAND2 = "name a school"
+COMMAND1 = "name a venemos snake"
+COMMAND2 = "name a school"												
+COMMAND3 = "name a harry potter character"  
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -9,9 +10,10 @@ def handle_command(command):
     """
     response = ""
     if COMMAND1 in command:
-        response = "Indian cobra???"
+        response = "Indian cobra"
     elif COMMAND2 in command:
-        response = "wems"
-        
+		response = "Hogwarts" 
+    elif COMMAND3 in command:
+		response= "Hermione"
     return response
 
