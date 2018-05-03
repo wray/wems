@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "~~"
+COMMAND1 = "mardi belle test"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -9,7 +9,7 @@ def handle_command(command):
     """
     response = ""
     if COMMAND1 in command:
-        response = "Huh?"
+        response = "mardi belle test passed!"
         
     return response
 
