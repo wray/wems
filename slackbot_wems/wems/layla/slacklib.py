@@ -1,5 +1,5 @@
 # Put your commands here
-COMMAND1 = "layla test"
+COMMAND1 = "good morning"
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -9,7 +9,7 @@ def handle_command(command):
     """
     response = ""
     if COMMAND1 in command:
-        response = "layla test passed!"
+        response = "hi there! good morning!"
         
     return response
 
