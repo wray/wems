@@ -1,6 +1,8 @@
 # Put your commands here
-COMMAND1 = ""
-COMMAND2 = ""
+COMMAND1 = "is techem boring when weget pizza"
+COMMAND2 = "do you like jakc a lantern"
+COMMAND3 = "what is your favorit my little ponny charicter"
+COMMAND4 = "chickin"
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -9,9 +11,13 @@ def handle_command(command):
     """
     response = ""
     if command.find(COMMAND1) >= 0:
-        response = ""
+        response = "no.i love pizza"
     elif command.find(COMMAND2) >= 0:
-        response = ""
+        response = "yes"
+     elif command.find(COMMAND3) >= 0:
+        response = "i doint like my little ponny."
+     elif command.find(COMMAND4) >= 0:
+        response = "what!"
 
 
     return response
