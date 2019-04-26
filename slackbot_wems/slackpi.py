@@ -13,27 +13,13 @@ import chris.slacklib
 # Student imports  
 import matthew.slacklib
 
-import wems.bella.slacklib
-import wems.clarke.slacklib
-import wems.dean.slacklib
-import wems.emerson.slacklib
+# WEMS imports
 import wems.james.slacklib
-import wems.jonathan.slacklib
-import wems.kent.slacklib
-import wems.meira.slacklib
-import wems.morgan.slacklib
-import wems.sam.slacklib
-import wems.sienna.slacklib
-import wems.soumya.slacklib
-import wems.viktor.slacklib
-
-import wems.adele.slacklib
-import wems.hank.slacklib
+import wems.caroline.slacklib
 import wems.ibby.slacklib
+import wems.rhyder.slacklib
+import wems.hank.slacklib
 import wems.layla.slacklib
-import wems.mardi_belle.slacklib
-import wems.naomi.slacklib
-import wems.spencer.slacklib
 
 # constants
 try:
@@ -61,26 +47,13 @@ def handle_command(command, channel):
     
         response += matthew.slacklib.handle_command(command)
 
-        response += wems.bella.slacklib.handle_command(command)
-        response += wems.clarke.slacklib.handle_command(command)
-        response += wems.dean.slacklib.handle_command(command)
-        response += wems.emerson.slacklib.handle_command(command)
         response += wems.james.slacklib.handle_command(command)
-        response += wems.kent.slacklib.handle_command(command)
-        response += wems.meira.slacklib.handle_command(command)
-        response += wems.morgan.slacklib.handle_command(command)
-        response += wems.sam.slacklib.handle_command(command)
-        response += wems.sienna.slacklib.handle_command(command)
-        response += wems.soumya.slacklib.handle_command(command)
-        response += wems.viktor.slacklib.handle_command(command)
-
-        response += wems.adele.slacklib.handle_command(command)
         response += wems.hank.slacklib.handle_command(command)
         response += wems.ibby.slacklib.handle_command(command)
         response += wems.layla.slacklib.handle_command(command)
-        response += wems.mardi_belle.slacklib.handle_command(command)
-        response += wems.naomi.slacklib.handle_command(command)
-        response += wems.spencer.slacklib.handle_command(command)
+        response += wems.rhyder.slacklib.handle_command(command)
+        response += wems.caroline.slacklib.handle_command(command)
+
     except:
         response += str(sys.exc_info()[0])
 
