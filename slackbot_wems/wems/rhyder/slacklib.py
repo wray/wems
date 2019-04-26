@@ -18,7 +18,7 @@ def handle_command(command):
     elif command.find(COMMAND3) >= 0:
         response = "mr brown can moo can you"
     elif command.find(COMMAND4) >= 0:
-        response = "markers
+        response = "markers"
 
 
     return response

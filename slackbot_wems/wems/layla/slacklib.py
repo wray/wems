@@ -14,9 +14,9 @@ def handle_command(command):
         response = "no.i love pizza"
     elif command.find(COMMAND2) >= 0:
         response = "yes"
-     elif command.find(COMMAND3) >= 0:
+    elif command.find(COMMAND3) >= 0:
         response = "i doint like my little ponny."
-     elif command.find(COMMAND4) >= 0:
+    elif command.find(COMMAND4) >= 0:
         response = "what!"
 
 
