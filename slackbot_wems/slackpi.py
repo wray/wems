@@ -5,6 +5,8 @@ from slackclient import SlackClient
 
 import bot_id
 
+import RPi.GPIO as GPIO
+
 # Instructor imports
 import wray.slacklib
 import joe.slacklib
@@ -39,7 +41,9 @@ def handle_command(command, channel):
         Need to determine an algorithm for student overloaded commands.
     """
     response = ""
-    
+
+    import RPi.GPIO as GPIO
+
     try:
         response = wray.slacklib.handle_command(command)
         response += joe.slacklib.handle_command(command)
@@ -67,6 +71,8 @@ def handle_command(command, channel):
 
 
 def parse_slack_output(slack_rtm_output):
+    
+    import RPi.GPIO as GPIO
     """
         The Slack Real Time Messaging API is an events firehose.
         this parsing function returns None unless a message is
