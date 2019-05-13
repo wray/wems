@@ -7,11 +7,12 @@ import bot_id
 
 import RPi.GPIO as GPIO
 
+
 # Instructor imports
 import wray.slacklib
 import joe.slacklib
 import chris.slacklib
-
+import chris.light
 # Student imports  
 import matthew.slacklib
 

@@ -4,8 +4,8 @@ import time
 
 import RPi.GPIO as GPIO
 import emoji
-#import breadBoard
 
+from light_sensor import light
 
 
 # Put your commands here
@@ -24,8 +24,10 @@ greenLedOff = str("green off")
 yellowLedOn = str("yellow on")
 yellowLedOff = str("yellow off")
 
+lightAverage = str("the light")
+
 GPIO.setmode(GPIO.BCM)
-#GPIO.setwarnings(False)
+GPIO.setwarnings(False)
 
 # Pin Setup
 GPIO.setup(17, GPIO.OUT) # BLUE LED
@@ -33,6 +35,7 @@ GPIO.setup(27, GPIO.OUT) # RED LED
 GPIO.setup(5, GPIO.OUT) # GREEN LED
 GPIO.setup(22, GPIO.OUT) # YELLOW LED
 
+GPIO.setup(12, GPIO.OUT) # LDR 
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -96,12 +99,13 @@ def handle_command(command):
         #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :sunny: OFF...")
 
-
-
-    
-    
-    
-    
+    # LDR STUFF
+    elif command.find(lightAverage) >=0:
+        pin = 12
+        light = light(pin)
+        avg = light
+         
+        response = print(avg)
+        
     #GPIO.cleanup()
     return response
-
