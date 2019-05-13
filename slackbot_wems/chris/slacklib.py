@@ -1,15 +1,29 @@
 import time
+
 import RPi.GPIO as GPIO
-import urllib.request
+import emoji
+#import breadBoard
 
-
-COMMANDA = "are you awake?"
-COMMANDB = "is tech em online?"
 
 
 # Put your commands here
-COMMAND1 = "blue led on"
-COMMAND2 = "blue led off"
+COMMAND1 = "testing testing"
+COMMAND2 = "roger roger"
+
+blueLedOn = str("blue on")
+blueLedOff = str("blue off")
+redLedOn = str("red on")
+redLedOff = str("red off")
+
+GPIO.setmode(GPIO.BCM)
+#GPIO.setwarnings(False)
+
+# Pin Setup
+GPIO.setup(17, GPIO.OUT) # BLUE LED
+#breadBoard.setupPin(17)
+
+GPIO.setup(27, GPIO.OUT) # RED LED
+
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -19,27 +33,36 @@ def handle_command(command):
     """
 
     response = ""
-    
-    GPIO.setmode(GPIO.BCM)
-    #GPIO.setwarnings(False)
-    GPIO.setup(17, GPIO.OUT)
-
     if command.find(COMMAND1) >= 0:
-        import RPi.GPIO as GPIO
-        GPIO.output(17, GPIO.HIGH)
-        response = "I can do that! Turning the Blue LED on..."
-    
+        response = str("Surprise!")    
     elif command.find(COMMAND2) >= 0:
-        GPIO.output(17, GPIO.LOW)
-        response = "Turning off Blue LED"
-
-    elif command.find(COMMANDB) >= 0:
-        code = urllib.request.urlopen("http://www.techemstudios.com").getcode()
-        if code == 200:
-            response = "Tech Em Studios is currently online!"
-        else:
-            response = "Uh oh, it appears Tech Em Studios is offline"
-
-
+        response = (emoji.emojize('Python\n is\n :thumbs_up: :thumbs_up: :thumbs_up:'))
     
+    
+    # Breadboard Commands
+
+    # BLUE LED
+    elif command.find(blueLedOn) >= 0:
+        GPIO.output(17, True)
+        #breadBoard.blueLed(1)
+        response = emoji.emojize("" + "Turning :radio_button: ON...")
+
+    elif command.find(blueLedOff) >= 0:
+        GPIO.output(17, False)
+        #breadBoard.blueLed(0)
+        response = emoji.emojize("" + "Turning :radio_button: OFF...")
+    
+    # RED LED  
+    elif command.find(redLedOn) >= 0:
+        GPIO.output(27, True)
+        #breadBoard.blueLed(1)
+        response = emoji.emojize("" + "Turning :red_circle: ON...")
+
+    elif command.find(redLedOff) >= 0:
+        GPIO.output(27, False)
+        #readBoard.blueLed(0)
+        response = emoji.emojize("" + "Turning :red_circle: OFF...")
+    
+    #GPIO.cleanup()
     return response
+
