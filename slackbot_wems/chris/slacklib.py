@@ -21,6 +21,8 @@ redLedOff = str("red off")
 greenLedOn = str("green on")
 greenLedOff = str("green off")
 
+yellowLedOn = str("yellow on")
+yellowLedOff = str("yellow off")
 
 GPIO.setmode(GPIO.BCM)
 #GPIO.setwarnings(False)
@@ -29,6 +31,8 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setup(17, GPIO.OUT) # BLUE LED
 GPIO.setup(27, GPIO.OUT) # RED LED
 GPIO.setup(5, GPIO.OUT) # GREEN LED
+GPIO.setup(22, GPIO.OUT) # YELLOW LED
+
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -70,7 +74,6 @@ def handle_command(command):
         response = emoji.emojize("" + "Turning :red_circle: OFF...")
    
    # GREEN LED
-
     elif command.find(greenLedOn) >= 0:
         GPIO.output(5, True)
         #breadBoard.greenLed(1)
@@ -80,7 +83,21 @@ def handle_command(command):
         GPIO.output(5, False)
         #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :green_apple: OFF...")
-    
+   
+   # YELLOW LED
+
+    elif command.find(yellowLedOn) >= 0:
+        GPIO.output(22, True)
+        #breadBoard.greenLed(1)
+        response = emoji.emojize("" + "Turning :sunny: ON...")
+
+    elif command.find(yellowLedOff) >= 0:
+        GPIO.output(22, False)
+        #readBoard.blueLed(0)
+        response = emoji.emojize("" + "Turning :sunny: OFF...")
+
+
+
     
     
     

@@ -4,6 +4,8 @@ python:
 install:
 - pip install slackclient
 - pip install urllib3
+- pip install RPi.GPIO
+- pip install emoji
 script: "./unittests"
 notifications:
   slack:
