@@ -1,3 +1,5 @@
+# vim ftw
+
 import time
 
 import RPi.GPIO as GPIO
@@ -12,17 +14,21 @@ COMMAND2 = "roger roger"
 
 blueLedOn = str("blue on")
 blueLedOff = str("blue off")
+
 redLedOn = str("red on")
 redLedOff = str("red off")
+
+greenLedOn = str("green on")
+greenLedOff = str("green off")
+
 
 GPIO.setmode(GPIO.BCM)
 #GPIO.setwarnings(False)
 
 # Pin Setup
 GPIO.setup(17, GPIO.OUT) # BLUE LED
-#breadBoard.setupPin(17)
-
 GPIO.setup(27, GPIO.OUT) # RED LED
+GPIO.setup(5, GPIO.OUT) # GREEN LED
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -62,6 +68,22 @@ def handle_command(command):
         GPIO.output(27, False)
         #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :red_circle: OFF...")
+   
+   # GREEN LED
+
+    elif command.find(greenLedOn) >= 0:
+        GPIO.output(5, True)
+        #breadBoard.greenLed(1)
+        response = emoji.emojize("" + "Turning :green_apple: ON...")
+
+    elif command.find(greenLedOff) >= 0:
+        GPIO.output(5, False)
+        #readBoard.blueLed(0)
+        response = emoji.emojize("" + "Turning :green_apple: OFF...")
+    
+    
+    
+    
     
     #GPIO.cleanup()
     return response

@@ -42,8 +42,6 @@ def handle_command(command, channel):
     """
     response = ""
 
-    import RPi.GPIO as GPIO
-
     try:
         response = wray.slacklib.handle_command(command)
         response += joe.slacklib.handle_command(command)
@@ -72,7 +70,6 @@ def handle_command(command, channel):
 
 def parse_slack_output(slack_rtm_output):
     
-    import RPi.GPIO as GPIO
     """
         The Slack Real Time Messaging API is an events firehose.
         this parsing function returns None unless a message is
