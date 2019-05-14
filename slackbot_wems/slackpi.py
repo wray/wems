@@ -3,26 +3,27 @@ import sys
 import time
 from slackclient import SlackClient
 
-import bot_id
+import slackbot_wems.bot_id as bot_id
 
 import RPi.GPIO as GPIO
 
 
 # Instructor imports
-import wray.slacklib
-import joe.slacklib
-import chris.slacklib
-import chris.light
+import slackbot_wems.wray.slacklib
+import slackbot_wems.joe.slacklib
+import slackbot_wems.chris.slacklib
+import slackbot_wems.chris.segment_7
+import slackbot_wems.chris.light_sensor
 # Student imports  
-import matthew.slacklib
+import slackbot_wems.matthew.slacklib
 
 # WEMS imports
-import wems.james.slacklib
-import wems.caroline.slacklib
-import wems.ibby.slacklib
-import wems.rhyder.slacklib
-import wems.hank.slacklib
-import wems.layla.slacklib
+import slackbot_wems.wems.james.slacklib
+import slackbot_wems.wems.caroline.slacklib
+import slackbot_wems.wems.ibby.slacklib
+import slackbot_wems.wems.rhyder.slacklib
+import slackbot_wems.wems.hank.slacklib
+import slackbot_wems.wems.layla.slacklib
 
 # constants
 try:

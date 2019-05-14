@@ -2,7 +2,7 @@ import random
 import json
 import urllib3
 
-#import temp_humidity
+import slackbot_wems.wray.temp_humidity
 #import led
 
 COMMAND1 = "who are you"

@@ -5,8 +5,8 @@ import time
 import RPi.GPIO as GPIO
 import emoji
 
-from light_sensor import light
-
+#from light_sensor import light
+#import segment_7
 
 # Put your commands here
 COMMAND1 = "testing testing"
@@ -25,6 +25,8 @@ yellowLedOn = str("yellow on")
 yellowLedOff = str("yellow off")
 
 lightAverage = str("the light")
+
+segment = str("update clock")
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -99,13 +101,24 @@ def handle_command(command):
         #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :sunny: OFF...")
 
-    # LDR STUFF
     elif command.find(lightAverage) >=0:
-        pin = 12
-        light = light(pin)
-        avg = light
-         
-        response = print(avg)
-        
+        try:
+            avg = []
+            for i in range(24):
+                avg.append(light(pin))
+
+            del avg[0:4]
+
+            avg = sum(avg) / len(avg)
+
+            response = avg
+        except:
+            response = ("Oops! That didn't seem to work")
+
+
+    #elif command.find(segment) >= 0:
+
     #GPIO.cleanup()
     return response
+
+
