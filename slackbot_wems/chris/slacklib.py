@@ -5,8 +5,12 @@ import time
 import RPi.GPIO as GPIO
 import emoji
 
-#from light_sensor import light
+# For local testing
+#import light_sensor as light
 #import segment_7
+
+import slackbot_wems.chris.light_sensor
+import slackbot_wems.chris.segment7 as segment
 
 # Put your commands here
 COMMAND1 = "testing testing"
@@ -26,7 +30,11 @@ yellowLedOff = str("yellow off")
 
 lightAverage = str("the light")
 
-segment = str("update clock")
+clock = str("update clock")
+scramble = str('scramble the 7')
+hacker = str('hack the 7')
+
+
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -101,24 +109,18 @@ def handle_command(command):
         #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :sunny: OFF...")
 
-    elif command.find(lightAverage) >=0:
-        try:
-            avg = []
-            for i in range(24):
-                avg.append(light(pin))
-
-            del avg[0:4]
-
-            avg = sum(avg) / len(avg)
-
-            response = avg
-        except:
-            response = ("Oops! That didn't seem to work")
+    #elif command.find(lightAverage) >=0:
 
 
-    #elif command.find(segment) >= 0:
+    elif command.find(clock) >= 0:
+        print('Updating the clock!')
+        response = segment.updateClock()
 
-    #GPIO.cleanup()
+    elif command.find(scramble) >= 0:
+        print emoji.emojize(':egg: There is nothing better than scrambled eggs! :egg:')
+        response = segment.scramble()
+
+#GPIO.cleanup()
     return response
 
-
+ 
