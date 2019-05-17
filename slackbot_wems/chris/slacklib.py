@@ -9,8 +9,10 @@ import emoji
 #import light_sensor as light
 #import segment_7
 
-import slackbot_wems.chris.light_sensor
+import slackbot_wems.chris.light as lite
 import slackbot_wems.chris.segment7 as segment
+#import slackbot_wems.chris.temp
+
 
 # Put your commands here
 COMMAND1 = "testing testing"
@@ -28,13 +30,14 @@ greenLedOff = str("green off")
 yellowLedOn = str("yellow on")
 yellowLedOff = str("yellow off")
 
-lightAverage = str("the light")
-
 clock = str("update clock")
 scramble = str('scramble the 7')
 hacker = str('hack the 7')
 
+singleReading = str('light')
+#quadReading = str('more readings')
 
+#showTemp = str('show me the temp')
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
@@ -117,10 +120,37 @@ def handle_command(command):
         response = segment.updateClock()
 
     elif command.find(scramble) >= 0:
-        print emoji.emojize(':egg: There is nothing better than scrambled eggs! :egg:')
+        print(emoji.emojize(":egg: There is nothing better than scrambled eggs! :egg:"))
         response = segment.scramble()
 
-#GPIO.cleanup()
+    elif command.find(hacker) >= 0:
+        print('Message')
+        response = segment.hacker()
+    
+    elif command.find(singleReading) >= 0:
+        a = lite.printReading()
+        a = int(a)
+        time.sleep(1)
+        print(a)
+        
+        
+        response = ('Here is what the LDR Sensor said to me: ' + str(a)) 
+   
+    #elif command.find(quadReading) >= 0:
+        #a = []
+        #for i in range(5):
+            #a.append(lite.printReading())
+            #time.wait(.5)
+        
+        #print(a)
+        #response = ('More light: ' + (a))
+    elif command.find(showTemp) >= 0:
+        
+        response = fuck.read_temp_humidity()
+        #response = ('The current temp is %0.2f C, %0.2f F, with a humidty of %0.2f%%' % (read_temp_humidity()))
+    
+
+
     return response
 
  

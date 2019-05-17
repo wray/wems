@@ -9,11 +9,11 @@ import RPi.GPIO as GPIO
 
 
 # Instructor imports
-import slackbot_wems.wray.slacklib
-import slackbot_wems.joe.slacklib
-import slackbot_wems.chris.slacklib
-import slackbot_wems.chris.segment_7
-import slackbot_wems.chris.light_sensor
+import slackbot_wems.wray.slacklib as wray
+import slackbot_wems.joe.slacklib as joe
+import slackbot_wems.chris.slacklib as chris
+import slackbot_wems.chris.segment7
+import slackbot_wems.chris.light
 # Student imports  
 import slackbot_wems.matthew.slacklib
 
@@ -45,18 +45,18 @@ def handle_command(command, channel):
     response = ""
 
     try:
-        response = wray.slacklib.handle_command(command)
-        response += joe.slacklib.handle_command(command)
-        response += chris.slacklib.handle_command(command)
+        response = wray.handle_command(command)
+        response += joe.handle_command(command)
+        response += chris.handle_command(command)
     
-        response += matthew.slacklib.handle_command(command)
+        response += slackbot_wems.matthew.slacklib.handle_command(command)
 
-        response += wems.james.slacklib.handle_command(command)
-        response += wems.hank.slacklib.handle_command(command)
-        response += wems.ibby.slacklib.handle_command(command)
-        response += wems.layla.slacklib.handle_command(command)
-        response += wems.rhyder.slacklib.handle_command(command)
-        response += wems.caroline.slacklib.handle_command(command)
+        response += slackbot_wems.wems.james.slacklib.handle_command(command)
+        response += slackbot_wems.wems.hank.slacklib.handle_command(command)
+        response += slackbot_wems.wems.ibby.slacklib.handle_command(command)
+        response += slackbot_Wems.wems.layla.slacklib.handle_command(command)
+        response += slackbot_wems.wems.rhyder.slacklib.handle_command(command)
+        response += slackbot_wems.wems.caroline.slacklib.handle_command(command)
 
     except:
         response += str(sys.exc_info()[0])
