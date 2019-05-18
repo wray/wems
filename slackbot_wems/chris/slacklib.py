@@ -2,15 +2,12 @@
 
 import time
 
-import RPi.GPIO as GPIO
 import emoji
 
 # For local testing
 #import light_sensor as light
 #import segment_7
 
-import slackbot_wems.chris.light as lite
-import slackbot_wems.chris.segment7 as segment
 #import slackbot_wems.chris.temp
 
 
@@ -39,16 +36,24 @@ singleReading = str('light')
 
 #showTemp = str('show me the temp')
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setwarnings(False)
+def setup():
+    import RPi.GPIO as GPIO
 
-# Pin Setup
-GPIO.setup(17, GPIO.OUT) # BLUE LED
-GPIO.setup(27, GPIO.OUT) # RED LED
-GPIO.setup(5, GPIO.OUT) # GREEN LED
-GPIO.setup(22, GPIO.OUT) # YELLOW LED
+    import slackbot_wems.chris.light as lite
+    import slackbot_wems.chris.segment7 as segment
+    
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setwarnings(False)
 
-GPIO.setup(12, GPIO.OUT) # LDR 
+    # Pin Setup
+    GPIO.setup(17, GPIO.OUT) # BLUE LED
+    GPIO.setup(27, GPIO.OUT) # RED LED
+    GPIO.setup(5, GPIO.OUT) # GREEN LED
+    GPIO.setup(22, GPIO.OUT) # YELLOW LED
+    
+    GPIO.setup(12, GPIO.OUT) # LDR 
+
+setup = False
 
 # Your handling code goes in this function
 def handle_command(command):
@@ -57,6 +62,10 @@ def handle_command(command):
         a response, if necessary.
 
     """
+
+    if not setup:
+        setup_gpio()
+        setup = True
 
     response = ""
     if command.find(COMMAND1) >= 0:

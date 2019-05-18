@@ -5,15 +5,16 @@ from slackclient import SlackClient
 
 import slackbot_wems.bot_id as bot_id
 
-import RPi.GPIO as GPIO
+# Don't introduce a dependency in the main module if it isn't required here
+#import RPi.GPIO as GPIO
 
 
 # Instructor imports
 import slackbot_wems.wray.slacklib as wray
 import slackbot_wems.joe.slacklib as joe
 import slackbot_wems.chris.slacklib as chris
-import slackbot_wems.chris.segment7
-import slackbot_wems.chris.light
+#import slackbot_wems.chris.segment7
+#import slackbot_wems.chris.light
 # Student imports  
 import slackbot_wems.matthew.slacklib
 
