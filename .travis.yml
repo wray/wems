@@ -11,6 +11,8 @@ notifications:
   slack:
     secure: VnGm8+FlYK4sqIVR1O/Y2WlZiE0QZnoRnzs1yWfHGvzL4Yqxs05X2/fmvDZNJ+EB4e2rdqKCA+MOUCdppg6l7xQbBSMJgbjL7Uatw7RnNczziarHIP4gvOmwQzzJkJTEMXsh5es7X0Bjp0Q4KhUqhU4MftUWLJMEaZWdW5q5houwaNODkC1pg7cWAuCwjjVBJXj5LJG9LNHvtF9G9iQtdgdRckorQafk+v+SUR5N7NwBgrG6bAqLZgPXtG7UiKGFBdJ5udbahKYrogV8Ne+n0QVllbU/5MQBp8xcbfENJ6fTEHUEksuzMiAjCX1IQMrUXe0QFflhiSDIjEGDiP2O3klYOaXMruS4+CpfGK67Z+5j6RQzn1Rdrg3F2veVBz7YQTBwZzvcv/y5Ep/mlRsk8DKDXuVN2Lh+WxGGq1gZAlKYdcNd+cNYx+E2f/RnRwYsNy5LT9B9O86upBNwWr5k8S5I6H5S3Ui8KwcelTrDuSb7hdxa+clrIouR2usPU7wdl7/1eP0LnAjSbaA+Dn2SaOLWh6HSA7/GrkJPqdvMlVoDx9RxNW60HErGqEBBqEPlPXzf3QZZWTSV+TR96/4holb9mXJBLjuYabXUmq3Lz+6hBLFH/I5kV3PaLqjmE5D+4oDp0gcQF1oKfzbTRTDFeAPWNTXiPfqJbdlGYOnwrlQ=
 deploy:
+  on:
+    all_branches: true
   provider: pypi
   skip_cleanup: true
   user: wray
