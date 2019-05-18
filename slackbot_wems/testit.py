@@ -1,17 +1,7 @@
 import unittest
-import bot_id
-import slackpi
+import slackbot_wems.slackpi as slackpi
 import wray.slacklib
 import chris.slacklib
-import joe.slacklib
-import matthew.slacklib
-
-import wems.james.slacklib
-import wems.hank.slacklib
-import wems.ibby.slacklib
-import wems.layla.slacklib
-import wems.caroline.slacklib
-import wems.rhyder.slacklib
 
 class TestSlackBotFunctions(unittest.TestCase):
 
