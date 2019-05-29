@@ -3,8 +3,8 @@
 # Be careful, this will kill all running python processes!
 killall python 
 
-pip install --upgrade slackbot_wems
+python3 -m pip install --upgrade --user slackbot_wems
 
 export SLACK_BOT_TOKEN=${your_slack_bot_token}
 
-python -m slackbot_wems.slackpi
+python3 -m slackbot_wems.slackpi
