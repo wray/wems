@@ -1,6 +1,6 @@
 # Put your commands here
-COMMAND1 = "hank test"
-
+COMMAND1 = ""
+COMMAND2 = ""
 # Your handling code goes in this function
 def handle_command(command):
     """
@@ -8,8 +8,11 @@ def handle_command(command):
         a response, if necessary.
     """
     response = ""
-    if COMMAND1 in command:
-        response = "hank test passed!"
-        
+    if command.find(COMMAND1) >= 0:
+        response = ""
+    elif command.find(COMMAND2) >= 0:
+        response = ""
+
+
     return response
 

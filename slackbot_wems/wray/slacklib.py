@@ -2,7 +2,7 @@ import random
 import json
 import urllib3
 
-import temp_humidity
+import slackbot_wems.wray.temp_humidity
 #import led
 
 COMMAND1 = "who are you"
@@ -22,6 +22,8 @@ def handle_command(command):
         response = "My name is Wemmy! I am a Slack bot that is built by the kids are West End Montessori school! Try asking what I can do."
     elif command.find(COMMAND2) >= 0:
         response = "Not much right now... waiting for students to teach me."
+    
+    
     elif command.find(COMMAND3) >= 0:
         try:
             temp_c,temp,humidity = temp_humidity.read_temp_humidity()
@@ -29,6 +31,8 @@ def handle_command(command):
         except:
             response = "At my location, there is a sensor malfunction."
 
+    
+    
     elif command.find(COMMAND4) >= 0:
         http = urllib3.PoolManager()
         try:

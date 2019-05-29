@@ -3,37 +3,28 @@ import sys
 import time
 from slackclient import SlackClient
 
-import bot_id
+import slackbot_wems.bot_id as bot_id
+
+# Don't introduce a dependency in the main module if it isn't required here
+#import RPi.GPIO as GPIO
+
 
 # Instructor imports
-import wray.slacklib
-import joe.slacklib
-import chris.slacklib
-
+import slackbot_wems.wray.slacklib as wray
+import slackbot_wems.joe.slacklib as joe
+import slackbot_wems.chris.slacklib as chris
+#import slackbot_wems.chris.segment7
+#import slackbot_wems.chris.light
 # Student imports  
-import matthew.slacklib
+import slackbot_wems.matthew.slacklib
 
-import wems.bella.slacklib
-import wems.clarke.slacklib
-import wems.dean.slacklib
-import wems.emerson.slacklib
-import wems.james.slacklib
-import wems.jonathan.slacklib
-import wems.kent.slacklib
-import wems.meira.slacklib
-import wems.morgan.slacklib
-import wems.sam.slacklib
-import wems.sienna.slacklib
-import wems.soumya.slacklib
-import wems.viktor.slacklib
-
-import wems.adele.slacklib
-import wems.hank.slacklib
-import wems.ibby.slacklib
-import wems.layla.slacklib
-import wems.mardi_belle.slacklib
-import wems.naomi.slacklib
-import wems.spencer.slacklib
+# WEMS imports
+import slackbot_wems.wems.james.slacklib
+import slackbot_wems.wems.caroline.slacklib
+import slackbot_wems.wems.ibby.slacklib
+import slackbot_wems.wems.rhyder.slacklib
+import slackbot_wems.wems.hank.slacklib
+import slackbot_wems.wems.layla.slacklib
 
 # constants
 try:
@@ -53,34 +44,21 @@ def handle_command(command, channel):
         Need to determine an algorithm for student overloaded commands.
     """
     response = ""
-    
+
     try:
-        response = wray.slacklib.handle_command(command)
-        response += joe.slacklib.handle_command(command)
-        response += chris.slacklib.handle_command(command)
+        response = wray.handle_command(command)
+        response += joe.handle_command(command)
+        response += chris.handle_command(command)
     
-        response += matthew.slacklib.handle_command(command)
+        response += slackbot_wems.matthew.slacklib.handle_command(command)
 
-        response += wems.bella.slacklib.handle_command(command)
-        response += wems.clarke.slacklib.handle_command(command)
-        response += wems.dean.slacklib.handle_command(command)
-        response += wems.emerson.slacklib.handle_command(command)
-        response += wems.james.slacklib.handle_command(command)
-        response += wems.kent.slacklib.handle_command(command)
-        response += wems.meira.slacklib.handle_command(command)
-        response += wems.morgan.slacklib.handle_command(command)
-        response += wems.sam.slacklib.handle_command(command)
-        response += wems.sienna.slacklib.handle_command(command)
-        response += wems.soumya.slacklib.handle_command(command)
-        response += wems.viktor.slacklib.handle_command(command)
+        response += slackbot_wems.wems.james.slacklib.handle_command(command)
+        response += slackbot_wems.wems.hank.slacklib.handle_command(command)
+        response += slackbot_wems.wems.ibby.slacklib.handle_command(command)
+        response += slackbot_Wems.wems.layla.slacklib.handle_command(command)
+        response += slackbot_wems.wems.rhyder.slacklib.handle_command(command)
+        response += slackbot_wems.wems.caroline.slacklib.handle_command(command)
 
-        response += wems.adele.slacklib.handle_command(command)
-        response += wems.hank.slacklib.handle_command(command)
-        response += wems.ibby.slacklib.handle_command(command)
-        response += wems.layla.slacklib.handle_command(command)
-        response += wems.mardi_belle.slacklib.handle_command(command)
-        response += wems.naomi.slacklib.handle_command(command)
-        response += wems.spencer.slacklib.handle_command(command)
     except:
         response += str(sys.exc_info()[0])
 
@@ -94,6 +72,7 @@ def handle_command(command, channel):
 
 
 def parse_slack_output(slack_rtm_output):
+    
     """
         The Slack Real Time Messaging API is an events firehose.
         this parsing function returns None unless a message is
