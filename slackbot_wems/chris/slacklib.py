@@ -5,23 +5,23 @@ import emoji
 COMMAND1 = "testing testing"
 COMMAND2 = "roger roger"
 
-blueLedOn = str("blue on")
-blueLedOff = str("blue off")
+BLUEON = str("blue on")
+BLUEOFF = str("blue off")
 
-redLedOn = str("red on")
-redLedOff = str("red off")
+REDON = str("red on")
+REDOFF = str("red off")
 
-greenLedOn = str("green on")
-greenLedOff = str("green off")
+GREENON = str("green on")
+GREENOFF = str("green off")
 
-yellowLedOn = str("yellow on")
-yellowLedOff = str("yellow off")
+YELLOWON = str("yellow on")
+YELLOWOFF = str("yellow off")
 
-clock = str("update clock")
-scramble = str('scramble the 7')
-hacker = str('hack the 7')
+CLOCK = str("update clock")
+SCRAMBLE = str('scramble the 7')
+HACKER = str('hack the 7')
 
-singleReading = str('light')
+SINGLEREADING = str('light')
 
 def setup():
     import RPi.GPIO as GPIO
@@ -61,55 +61,55 @@ def handle_command(command):
         response = (emoji.emojize('Python\n is\n :thumbs_up: :thumbs_up: :thumbs_up:'))
 
 # Blue LED Commands
-    elif command.find(blueLedOn) >= 0:
+    elif command.find(BLUEON) >= 0:
         GPIO.output(17, True)
         response = emoji.emojize("" + "Turning :radio_button: ON...")
 
-    elif command.find(blueLedOff) >= 0:
+    elif command.find(BLUEOFF) >= 0:
         GPIO.output(17, False)
         response = emoji.emojize("" + "Turning :radio_button: OFF...")
     
 # Red LED Commands
-    elif command.find(redLedOn) >= 0:
+    elif command.find(REDON) >= 0:
         GPIO.output(27, True)
         response = emoji.emojize("" + "Turning :red_circle: ON...")
 
-    elif command.find(redLedOff) >= 0:
+    elif command.find(REDOFF) >= 0:
         GPIO.output(27, False)
         response = emoji.emojize("" + "Turning :red_circle: OFF...")
    
 # Green LED Commands
-    elif command.find(greenLedOn) >= 0:
+    elif command.find(GREENON) >= 0:
         GPIO.output(5, True)
         response = emoji.emojize("" + "Turning :green_apple: ON...")
 
-    elif command.find(greenLedOff) >= 0:
+    elif command.find(GREENOFF) >= 0:
         GPIO.output(5, False)
         response = emoji.emojize("" + "Turning :green_apple: OFF...")
    
 # Yellow LED Commands
-    elif command.find(yellowLedOn) >= 0:
+    elif command.find(YELLOWON) >= 0:
         GPIO.output(22, True)
         response = emoji.emojize("" + "Turning :sunny: ON...")
 
-    elif command.find(yellowLedOff) >= 0:
+    elif command.find(YELLOWOFF) >= 0:
         GPIO.output(22, False)
         response = emoji.emojize("" + "Turning :sunny: OFF...")
 
 # 7 Segment Commands
-    elif command.find(clock) >= 0:
+    elif command.find(CLOCK) >= 0:
         print('Updating the clock!')
         response = segment.updateClock()
 
-    elif command.find(scramble) >= 0:
+    elif command.find(SCRAMBLE) >= 0:
         print(emoji.emojize(":egg: There is nothing better than scrambled eggs! :egg:"))
         response = segment.scramble()
 
-    elif command.find(hacker) >= 0:
+    elif command.find(HACKER) >= 0:
         print('Message')
         response = segment.hacker()
     
-    elif command.find(singleReading) >= 0:
+    elif command.find(SINGLEREADING) >= 0:
         a = lite.printReading()
         a = int(a)
         time.sleep(1)
@@ -118,4 +118,3 @@ def handle_command(command):
 
     return response
 
- 
