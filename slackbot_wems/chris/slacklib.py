@@ -1,15 +1,9 @@
-# vim ftw
-
 import time
-
 import emoji
-
-# For local testing
-#import light_sensor as light
-#import segment_7
+#import slackbot_wems.light_sensor as light
+#import slackbot_wems.segment_7
 
 #import slackbot_wems.chris.temp
-
 
 # Put your commands here
 COMMAND1 = "testing testing"
@@ -32,9 +26,6 @@ scramble = str('scramble the 7')
 hacker = str('hack the 7')
 
 singleReading = str('light')
-#quadReading = str('more readings')
-
-#showTemp = str('show me the temp')
 
 def setup():
     import RPi.GPIO as GPIO
@@ -72,58 +63,44 @@ def handle_command(command):
         response = str("Surprise!")    
     elif command.find(COMMAND2) >= 0:
         response = (emoji.emojize('Python\n is\n :thumbs_up: :thumbs_up: :thumbs_up:'))
-    
-    
-    # Breadboard Commands
 
-    # BLUE LED
+# Blue LED Commands
     elif command.find(blueLedOn) >= 0:
         GPIO.output(17, True)
-        #breadBoard.blueLed(1)
         response = emoji.emojize("" + "Turning :radio_button: ON...")
 
     elif command.find(blueLedOff) >= 0:
         GPIO.output(17, False)
-        #breadBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :radio_button: OFF...")
     
-    # RED LED  
+# Red LED Commands
     elif command.find(redLedOn) >= 0:
         GPIO.output(27, True)
-        #breadBoard.blueLed(1)
         response = emoji.emojize("" + "Turning :red_circle: ON...")
 
     elif command.find(redLedOff) >= 0:
         GPIO.output(27, False)
-        #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :red_circle: OFF...")
    
-   # GREEN LED
+# Green LED Commands
     elif command.find(greenLedOn) >= 0:
         GPIO.output(5, True)
-        #breadBoard.greenLed(1)
         response = emoji.emojize("" + "Turning :green_apple: ON...")
 
     elif command.find(greenLedOff) >= 0:
         GPIO.output(5, False)
-        #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :green_apple: OFF...")
    
-   # YELLOW LED
-
+# Yellow LED Commands
     elif command.find(yellowLedOn) >= 0:
         GPIO.output(22, True)
-        #breadBoard.greenLed(1)
         response = emoji.emojize("" + "Turning :sunny: ON...")
 
     elif command.find(yellowLedOff) >= 0:
         GPIO.output(22, False)
-        #readBoard.blueLed(0)
         response = emoji.emojize("" + "Turning :sunny: OFF...")
 
-    #elif command.find(lightAverage) >=0:
-
-
+# 7 Segment Commands
     elif command.find(clock) >= 0:
         print('Updating the clock!')
         response = segment.updateClock()
@@ -144,21 +121,6 @@ def handle_command(command):
         
         
         response = ('Here is what the LDR Sensor said to me: ' + str(a)) 
-   
-    #elif command.find(quadReading) >= 0:
-        #a = []
-        #for i in range(5):
-            #a.append(lite.printReading())
-            #time.wait(.5)
-        
-        #print(a)
-        #response = ('More light: ' + (a))
-    elif command.find(showTemp) >= 0:
-        
-        response = fuck.read_temp_humidity()
-        #response = ('The current temp is %0.2f C, %0.2f F, with a humidty of %0.2f%%' % (read_temp_humidity()))
-    
-
 
     return response
 
