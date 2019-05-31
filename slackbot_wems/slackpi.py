@@ -13,9 +13,8 @@ import slackbot_wems.bot_id as bot_id
 import slackbot_wems.wray.slacklib as wray
 import slackbot_wems.joe.slacklib as joe
 import slackbot_wems.chris.slacklib as chris
-#import slackbot_wems.chris.segment7
-#import slackbot_wems.chris.light
-# Student imports  
+
+# Student imports
 import slackbot_wems.matthew.slacklib
 
 # WEMS imports
@@ -49,13 +48,12 @@ def handle_command(command, channel):
         response = wray.handle_command(command)
         response += joe.handle_command(command)
         response += chris.handle_command(command)
-    
-        response += slackbot_wems.matthew.slacklib.handle_command(command)
+        response += slackbot_wems.matthew.handle_command(command)
 
         response += slackbot_wems.wems.james.slacklib.handle_command(command)
         response += slackbot_wems.wems.hank.slacklib.handle_command(command)
         response += slackbot_wems.wems.ibby.slacklib.handle_command(command)
-        response += slackbot_Wems.wems.layla.slacklib.handle_command(command)
+        response += slackbot_wems.wems.layla.slacklib.handle_command(command)
         response += slackbot_wems.wems.rhyder.slacklib.handle_command(command)
         response += slackbot_wems.wems.caroline.slacklib.handle_command(command)
 

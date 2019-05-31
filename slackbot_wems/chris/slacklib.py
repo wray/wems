@@ -1,9 +1,5 @@
 import time
 import emoji
-#import slackbot_wems.light_sensor as light
-#import slackbot_wems.segment_7
-
-#import slackbot_wems.chris.temp
 
 # Put your commands here
 COMMAND1 = "testing testing"
@@ -118,8 +114,6 @@ def handle_command(command):
         a = int(a)
         time.sleep(1)
         print(a)
-        
-        
         response = ('Here is what the LDR Sensor said to me: ' + str(a)) 
 
     return response
